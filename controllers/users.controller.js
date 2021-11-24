@@ -13,7 +13,7 @@ async function getAllUsers(req, res){
             return res.json({response})
         }
     }catch(err){
-        console.log(err)
+        console.log('%c⧭', 'color: #aa00ff', err);
     }
 }
  module.exports = {

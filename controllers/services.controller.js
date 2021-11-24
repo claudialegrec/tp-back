@@ -13,8 +13,6 @@ async function showAllServices(req, res){
         } else {
             try{
                 var response = await Service.find();
-                console.log('conecta')
-        
                 
                 if(res.statusCode != 200){
                     return res.json({"Services": "No services found"})
@@ -22,12 +20,12 @@ async function showAllServices(req, res){
                     return res.json({response})
                 }
             }catch(err){
-                console.log(err)
+                console.log('%c⧭', 'color: #733d00', err);
             }
         
         }
     } catch (err) {
-        console.log(err)
+        console.log('%c⧭', 'color: #00bf00', err);
     }
 
 }
@@ -49,7 +47,7 @@ async function addNewService (req, res){
         }
 
     } catch (err){
-        console.log(err)
+        console.log('%c⧭', 'color: #0088cc', err);
     }
 }
 
@@ -70,7 +68,7 @@ async function updateService(req, res){
         
         return res.json({"success":true, "response": response})
     } catch (err) {
-        console.log(err)
+        console.log('%c⧭', 'color: #917399', err);
     }
     
     
@@ -87,7 +85,7 @@ async function deleteService(req, res) {
         return res.json({"response": response})
 
     } catch (err){
-        console.log(err)
+        console.log('%c⧭', 'color: #e50000', err);
     }
 }
 

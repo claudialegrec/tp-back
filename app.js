@@ -36,8 +36,8 @@ mongoose.connection.on("error", console.error.bind(console, "connection error: "
 mongoose.connection.once("open", function () {  
     console.log("Connected successfully");
 }, err => {
-    if (err) throw err;  
-    console.log('Not connected to MongoDB!!!')
+    if (err) throw err;
+    console.log('%c⧭', 'color: #ff0000', err);
 });
 
 try{
@@ -47,12 +47,10 @@ try{
 
   const util = require('util');
   client.get = util.promisify(client.get)
-  console.log("Redis conected")
+  console.log('%c⧭', 'color: #00e600', "Redis conected");
 
 } catch (err){
-
-  console.log(err)
-
+  console.log('%c⧭', 'color: #00a3cc', err);
 }
 
 app.use('/', indexRouter);
