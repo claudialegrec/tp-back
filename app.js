@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 var username = "rootadmin"
 var password = "root"
 
-const databaseUrl = `mongodb+srv://${username}:${password}@clusterulsa.kojal.mongodb.net/pdi3p?retryWrites=true&w=majority`;
+const databaseUrl = `mongodb+srv://${username}:${password}@clusterulsa.p45ko.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 const databaseOptions = {
 
