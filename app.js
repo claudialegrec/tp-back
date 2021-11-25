@@ -7,7 +7,7 @@ var mongoose = require('mongoose');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users.routes');
 var servicesRouter = require('./routes/services.routes');
-var aptsRouter = require('./routes/apts.routes')
+var citasRouter = require('./routes/citas.routes')
 var authRouter = require('./routes/auth.routes');
 
 var app = express();
@@ -56,7 +56,7 @@ try{
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/services', servicesRouter);
-app.use('/apts', aptsRouter);
+app.use('/citas', citasRouter);
 app.use('/auth', authRouter);
 
 module.exports = app;

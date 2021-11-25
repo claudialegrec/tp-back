@@ -1,6 +1,6 @@
-const Apt = require('../models/apts.model')
+const Apt = require('../models/citas.model')
 
-async function showAllApts(req, res){
+async function showAllCitas(req, res){
 
     try{
         var response = await Apt.find();
@@ -31,6 +31,6 @@ async function addNewAppointment (req, res){
 
 
 module.exports = {
-    showAllApts, 
+    showAllCitas, 
     addNewAppointment
 }

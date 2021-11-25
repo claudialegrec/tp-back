@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-var apts = require('../controllers/apts.controller');
+var citas = require('../controllers/citas.controller');
 const { verifyToken } = require('../controllers/auth.controller');
 
-router.get('/showAllApts', apts.showAllApts);
+router.get('/showAllCitas', citas.showAllCitas);
 
-router.post('/addNewAppointment', apts.addNewAppointment);
+router.post('/addNewAppointment', citas.addNewAppointment);
 
 
 
