@@ -14,7 +14,7 @@ async function showAllApts(req, res){
 
 async function addNewAppointment (req, res){
 
-    const { service, client_name, date, turn } = req.body
+    const { service, client_name, client_ap1, cleint_ap2, date, time } = req.body
 
     try{
 

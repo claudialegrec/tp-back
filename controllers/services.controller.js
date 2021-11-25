@@ -32,7 +32,8 @@ async function showAllServices(req, res){
 
 async function addNewService (req, res){
 
-    const { service_name } = req.body
+    const { title } = req.body
+    const { description } = req.body
 
 
     try{
@@ -54,7 +55,8 @@ async function addNewService (req, res){
 async function updateService(req, res){
 
     const id = req.body._id
-    const new_name = req.body.new_name
+    const title = req.body.title
+    const description = req.body.description
 
     console.log(id)
     try {
@@ -62,7 +64,8 @@ async function updateService(req, res){
             _id: id
         }, {
             $set:{
-               service_name: new_name 
+               title: title,
+               description: description
             }
         }, {new: true})
         
