@@ -41,14 +41,12 @@ mongoose.connection.once("open", function () { 
 });
 
 try{
-  
   // const redis = require("redis");
   // const client = redis.createClient();
 
   // const util = require('util');
   // client.get = util.promisify(client.get)
-  console.log('%c⧭', 'color: #00e600', "Redis conected");
-
+  // console.log('%c⧭', 'color: #00e600', "Redis conected");
 } catch (err){
   console.log('%c⧭', 'color: #00a3cc', err);
 }
