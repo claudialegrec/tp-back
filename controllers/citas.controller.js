@@ -5,7 +5,7 @@ async function showAllCitas(req, res){
     try{
         var response = await Apt.find();
         console.log('%c⧭', 'color: #d90000', response);
-        return res.json({"response": Response})
+        return res.json({"response": response})
     }catch(err) {
         console.log('%c⧭', 'color: #ffa640', err);
     }
